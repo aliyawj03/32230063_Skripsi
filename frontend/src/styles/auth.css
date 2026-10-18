@@ -1,0 +1,99 @@
+/* ==========================================================
+   auth.css — Layout kartu & formulir halaman Login/Register
+   ========================================================== */
+
+/* ---------- Background halaman auth ---------- */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  background:
+    radial-gradient(ellipse at 20% 80%, rgba(14, 124, 134, 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(20, 163, 176, 0.10) 0%, transparent 60%),
+    var(--color-bg);
+}
+
+/* ---------- Kartu putih ---------- */
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: 40px 36px 36px;
+  animation: cardIn 0.35s ease both;
+}
+
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Header kartu (logo + judul) ---------- */
+.auth-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.auth-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+  border-radius: var(--radius-md);
+  margin-bottom: 16px;
+  box-shadow: 0 4px 14px rgba(14, 124, 134, 0.3);
+}
+
+.auth-logo svg {
+  width: 28px;
+  height: 28px;
+  fill: #fff;
+}
+
+.auth-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 4px;
+  letter-spacing: -0.02em;
+}
+
+.auth-subtitle {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+/* ---------- Formulir ---------- */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ---------- Footer link (sudah punya akun? / daftar) ---------- */
+.auth-footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.auth-footer a {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+.auth-footer a:hover { text-decoration: underline; }
+
+/* ---------- Responsif HP ---------- */
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 32px 20px 28px;
+    border-radius: var(--radius-md);
+  }
+  .auth-title { font-size: 20px; }
+}
