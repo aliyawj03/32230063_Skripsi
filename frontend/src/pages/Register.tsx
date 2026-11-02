@@ -44,7 +44,7 @@ export default function Register() {
     setIsLoading(false);
   }
 
-  /* ---- Daftar / masuk dengan Google ---- */
+  /
   async function handleGoogleLogin() {
     setErrorMessage("");
     setIsLoading(true);
